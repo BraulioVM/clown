@@ -1,0 +1,9 @@
+{
+	  "name": "com.clown.listener",
+	  "description": "Clown Listener",
+	  "path": "/home/braulio/.clown/clown.py",
+	  "type": "stdio",
+	  "allowed_origins": [
+	    "chrome-extension://ommeighdhjbohjmhboaemggcgoccfmml/"
+	  ]
+	}
