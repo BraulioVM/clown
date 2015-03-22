@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: clown
+Version: 0.0.0
+Summary: Incredibly fast github repo cloning
+Home-page: https://github.com/pypa/sampleproject
+Author: Braulio Valdivielso
+Author-email: brlvldvlsmrtnz@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: github cloning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7

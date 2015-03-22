@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+client/__init__.py
+clown.egg-info/PKG-INFO
+clown.egg-info/SOURCES.txt
+clown.egg-info/dependency_links.txt
+clown.egg-info/entry_points.txt
+clown.egg-info/requires.txt
+clown.egg-info/top_level.txt
+server/__init__.py

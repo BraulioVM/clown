@@ -1,0 +1,4 @@
+[console_scripts]
+clown = client:clown
+clownd = server:init
+
