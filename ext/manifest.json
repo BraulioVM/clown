@@ -1,0 +1,19 @@
+{
+  "name": "Clown",
+  "version": "0.0",
+  "description": "Incredibly fast and easy github cloning",
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": ["clown.js"]
+    }
+  ],
+  "permissions": ["http://localhost:31415/"],
+  "manifest_version": 2
+}

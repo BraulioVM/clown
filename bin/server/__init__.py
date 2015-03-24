@@ -8,6 +8,7 @@ def repository_route():
 	global repository
 	
 	if request.method == "POST":
+		print request.form
 		repository = request.form["repository"]
 
 
