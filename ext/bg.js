@@ -21,30 +21,38 @@ function sendRepositoryURL(repository_url, fn, error_fn) {
 chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 
 
+	function showSuccess(){
+		chrome.pageAction.show(sender.tab.id);
+	}
+
+	function showError(){
+
+		chrome.pageAction.show(sender.tab.id);
+
+		chrome.pageAction.setIcon({
+			"tabId": sender.tab.id,
+			"path": "images/icon-error.png"
+		});
+
+		
+	}
+
 
 	function onSuccess(req, event){
 		if (req.readyState === 4) {
 			
 			if (req.status === 200) {
-				console.log("Everything went ok");
 				// Should display page action indicating success
-				chrome.pageAction.show(sender.tab.id);
-
-			} else {
-				console.log("Something smells rotten");
+				showSuccess();
+			} else {	// Not actually sucess
+				showError();
 			}
 
 		}		
 	}
 
-	function onError(error) {
-		// Any kind of error could be handled in onSuccess actually
-		console.log(error);
-	}
-
-
 	var repository_url = request.repository_url;
 
-	sendRepositoryURL(repository_url, onSuccess, onError);
+	sendRepositoryURL(repository_url, onSuccess);
 
 });
