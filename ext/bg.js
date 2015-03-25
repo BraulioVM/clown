@@ -20,21 +20,31 @@ function sendRepositoryURL(repository_url, fn, error_fn) {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 
+	var tabId = sender.tab.id;
 
 	function showSuccess(){
 		chrome.pageAction.show(sender.tab.id);
+
+		chrome.pageAction.setPopup({
+			"tabId": tabId,
+			"popup": "popups/success.html"
+		});
 	}
 
 	function showError(){
 
-		chrome.pageAction.show(sender.tab.id);
+		chrome.pageAction.show(tabId);
 
 		chrome.pageAction.setIcon({
-			"tabId": sender.tab.id,
+			"tabId": tabId,
 			"path": "images/icon-error.png"
 		});
 
-		
+		chrome.pageAction.setPopup({
+			"tabId": tabId,
+			"popup": "popups/error.html"
+		});
+
 	}
 
 
