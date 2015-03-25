@@ -14,6 +14,12 @@
       "js": ["clown.js"]
     }
   ],
+  "page_action": {
+    "default_icon": {
+      "38": "images/icon.png"
+    },
+    "default_title": "Ready to clown"
+  },
   "permissions": ["http://localhost:31415/"],
   "manifest_version": 2
 }

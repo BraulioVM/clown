@@ -20,13 +20,16 @@ function sendRepositoryURL(repository_url, fn, error_fn) {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 
+
+
 	function onSuccess(req, event){
 		if (req.readyState === 4) {
 			
 			if (req.status === 200) {
 				console.log("Everything went ok");
 				// Should display page action indicating success
-				
+				chrome.pageAction.show(sender.tab.id);
+
 			} else {
 				console.log("Something smells rotten");
 			}
