@@ -1,6 +1,6 @@
 {
   "name": "Clown",
-  "version": "0.0",
+  "version": "0.1",
   "description": "Incredibly fast and easy github cloning",
   "background": {
     "scripts": ["bg.js"],
