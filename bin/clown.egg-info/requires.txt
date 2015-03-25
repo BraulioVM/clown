@@ -1,7 +1,0 @@
-flask
-
-[dev]
-check-manifest
-
-[test]
-coverage
