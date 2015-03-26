@@ -23,7 +23,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 	var tabId = sender.tab.id;
 
 	function showSuccess(){
-		chrome.pageAction.show(sender.tab.id);
+		
+		chrome.pageAction.setIcon({
+			"tabId": tabId,
+			"path": "images/icon-success.png"
+		});
 
 		chrome.pageAction.setPopup({
 			"tabId": tabId,
@@ -32,8 +36,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 	}
 
 	function showError(){
-
-		chrome.pageAction.show(tabId);
 
 		chrome.pageAction.setIcon({
 			"tabId": tabId,
@@ -53,7 +55,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 			
 			if (req.status === 200) {
 				// Should display page action indicating success
-				showSuccess();
+				setTimeout(showSuccess, 200); 	// Let the user see the icon transition
 			} else {	// Not actually sucess
 				showError();
 			}
@@ -62,6 +64,12 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendReponse){
 	}
 
 	var repository_url = request.repository_url;
+
+	chrome.pageAction.show(sender.tab.id);
+	chrome.pageAction.setIcon({
+		tabId: tabId,
+		path: "images/icon.png"
+	});
 
 	sendRepositoryURL(repository_url, onSuccess);
 

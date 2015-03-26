@@ -1,11 +1,9 @@
-window.addEventListener("load", function(){
-
+(function(){
 	function getGoImportTag(){
 		return document.querySelector("meta[name='go-import']");
 	}
 
 	function isRepository() {
-		
 		return getGoImportTag() ? true : false;
 	}
 
@@ -16,11 +14,14 @@ window.addEventListener("load", function(){
 		return "https://" + tag_content.split(" ")[0];
 	}
 
-	
-
-	if ( isRepository() ) {
-		chrome.runtime.sendMessage({ repository_url : getRepositoryURL() });
+	function clownIfNeeded(){
+		if ( isRepository() ) {
+			chrome.runtime.sendMessage({ repository_url : getRepositoryURL() });
+		}	
 	}
 
 
-});
+	window.addEventListener("load", clownIfNeeded);
+	window.addEventListener("focus", clownIfNeeded);
+
+})();
