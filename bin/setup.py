@@ -90,4 +90,13 @@ setup(
 )
 print find_packages(exclude=['contrib', 'docs', 'tests*'])
 
+if sys.argv[1] == "install":
+    cron  = CronTab(user=True)
+
+    job = cron.new("`/usr/bin/which clownd`", comment="clownd server")
+
+    job.every_reboot()
+
+
+
 
