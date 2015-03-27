@@ -21,3 +21,6 @@ sudo make install # And follow the instructions
 
 ## How it works
 Clown runs a web server on port 31415 of your computer so that the chrome extension can communicate to it the repositories you visit. When you execute the clown command, it gets the repository url from the local web server and executes `git clone` on that url.
+
+## Any trouble?
+Just write an issue, I'll fix it ASAP :squirrel:
