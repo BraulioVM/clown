@@ -2,7 +2,8 @@
   "name": "Clown",
   "version": "0.2",
   "icons": {
-    "38": "images/icon.png"
+    "38": "images/icon.png",
+    "48": "images/48icon.png"
   },
   "description": "Incredibly fast and easy github cloning",
   "background": {
