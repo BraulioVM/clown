@@ -2,8 +2,8 @@ Clown
 ======
 > Fastest and easiest way to clone repositories ever.
 
-You're omnibox looks something like this:
-![alt text](http://i59.tinypic.com/29fw1vq.png "Chrome bar") (that green and red icon is clown)
+Your omnibox looks something like this:
+![1](http://i59.tinypic.com/29fw1vq.png "Chrome bar") (that green and red icon is clown)
 
 Open a terminal and execute ````clown````: **BOOM!** The repository is already getting cloned.
 
