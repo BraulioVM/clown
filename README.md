@@ -1,6 +1,6 @@
 Clown
 ======
-> Fastest and easiest way to clone repositories ever.
+> Fastest and easiest way to clone github repositories from linux ever.
 
 Your omnibox looks something like this:
 ![1](http://i59.tinypic.com/29fw1vq.png "Chrome bar") (that green and red icon is clown)
